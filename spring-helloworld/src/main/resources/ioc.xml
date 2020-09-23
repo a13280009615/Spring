@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!-- 注册一个person 对象  spring自动创建这个对象-->
+    <!--    一个bean标签注册一个组件
+      class： 注册的组件的全类名
+      id： 这个组件的唯一标识
+    -->
+    <bean id="person" class="com.zf.bean.Person">
+    <!--  property  给属性赋值   name 指定属性名  value 指定属性值      -->
+        <property name="id" value="1"/>
+        <property name="name" value="张三"/>
+    </bean>
+
+
+    <bean id="hua" class="com.zf.bean.Person">
+        <property name="name" value="小花"/>
+        <property name="id" value="2"/>
+    </bean>
+
+
+    <bean id="person2" class="com.zf.bean.Person">
+        <constructor-arg name="id" value="3"/>
+        <constructor-arg name="name" value="小明"/>
+    </bean>
+</beans>
